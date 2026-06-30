@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
 import LoginScreen from './page/LoginScreen';
 import CreateAccountScreen from './page/CreateAccountScreen';
 import BananaVisionScreen from './page/BananaVisionScreenGust'; 
@@ -11,18 +10,21 @@ import HistoryScreen from './page/HistoryScreen';
 import SettingsScreen from './page/SettingsScreen'; 
 import EditProfileScreen from './page/EditProfileScreen'; 
 
+import DashboardTabs from './page/dashboard/DashboardTabs';
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-        initialRouteName="BananaVision" 
+        initialRouteName="Dashboard" 
         screenOptions={{ 
           headerShown: false, 
           animation: 'slide_from_right' 
         }} 
       >
+        <Stack.Screen name="Dashboard" component={DashboardTabs} />
         
         <Stack.Screen name="BananaVision" component={BananaVisionScreen} />
         <Stack.Screen name="History" component={HistoryScreen} />
@@ -33,6 +35,12 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+
+        
+
+        
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
