@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 const SUPABASE_URL = 'https://ntkhwxhrlbqbjjvxgnup.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_OYHekLHFT8lx51no551jiQ_fWi3X7Jk'; 
 
-// 📝 ปรับปลายทางชี้ไปที่ตาราง profiles ตามฐานข้อมูลของคุณ
+
 const BASE_URL = `${SUPABASE_URL}/rest/v1/profiles`;
 const HEADERS = {
   'apikey': SUPABASE_ANON_KEY,
